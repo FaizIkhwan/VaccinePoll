@@ -1,0 +1,86 @@
+body {
+  text-align: center;
+  background: url(gambar.jpg);
+  background-size: cover;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.form-container input[type=text], .form-container input[type=email], .form-container input[type=phone], .form-container input[type=number], .form-container textarea {
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid white;
+  box-shadow: 0  0 1px 1px white;
+}
+.form-container textarea {
+  min-height: 150px;
+}
+.form-container .panel {
+  background: rgba(0, 0, 0, 0.2);
+}
+.form-container .panel .panel-heading {
+  margin-bottom: 20px;
+}
+.form-container .btn-group {
+  width: 90%;
+  margin: 0 auto 10px auto;
+}
+.form-container .back {
+  float: left;
+}
+.form-container .continue {
+  float: right;
+}
+
+/* Multi-Part CSS */
+input[type=checkbox] {
+  position: absolute;
+  /* Position the checkbox in upper left corner */
+  opacity: 0;
+}
+
+/* Styling Parts */
+#part1,
+#part2,
+#part3 {
+  z-index: 2;
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Hidden Parts */
+#part2,
+#part3 {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Show Step 2 & Hide Step 1 */
+#step2:checked ~ #part2 {
+  opacity: 1;
+  height: auto;
+}
+
+#step2:checked ~ #part1 {
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+/* Show Step 3  & Hide Step 2 */
+#step3:checked ~ #part3 {
+  opacity: 1;
+  height: auto;
+}
+
+#step3:checked ~ #part2 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
