@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <div class="innerNavigation">
+            IMPACT OF UNVACCINATED CHILDREN
+            <input id="btnLogin" type="button" value="Login" class="btnLogin">    
+        </div>  
+    </div>
+
+    <!-- Description -->
+    <div class="description">
+        Assalamualaikum and a very good day to everyone. We are from Faculty computer science and mathematics course CS230 Bachelor in computer science (hons).we are conducting a research survey on impact of unvaccinated children.we would love to hear and conduct the survey especially to parents to see if they know the goods effect of vaccination to their own children. This survey will help us to collect data and later be analyse for further studying. This survey will also show a statistics on how do parents know well about the good vaccine to their children
+    </div>
+
+    <div class="grid">
+        <div id="quiz">
+            <h1>Survey</h1>
+            <hr style="margin-bottom: 20px">
+
+            <p id="question"></p>
+
+            <div class="buttons">        
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>                
+            </div>
+
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+    </div>
+
+<script src="quiz.js"></script>
+<script src="question.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript">
+    document.getElementById("btnLogin").onclick = function () {
+        location.href = "login.html";
+    };
+</script>
+
+</body>
+</html>
