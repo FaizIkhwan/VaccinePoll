@@ -1,5 +1,11 @@
 body {
-    background-color: #eeeeee;
+    text-align: center;
+    background: url(gambar.jpg);
+    background-size: cover;
+}
+
+.dashboard {
+    background: url(gambar3.jpg);
 }
 
 .navigation {
@@ -19,11 +25,11 @@ body {
     font-weight: bold;
 }
 
-.btnLogin {
+.btnMenu {
     float: right;
     margin-right: 20px;
     background-color: #778897;
-    width: 100px;
+    width: 150px;
     font-size: 20px;
     color: #fff;
     border: 1px solid #1D3C6A;
@@ -37,6 +43,12 @@ body {
     margin-bottom: 20px;
     font-size: 20px;
     color: #000000;
+}
+
+.buttons-center {
+    text-align: center;
+    line-height: 450px;
+    margin: auto;
 }
 
 .grid {
