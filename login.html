@@ -5,8 +5,7 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 	<link rel="stylesheet" href="css/styletwo.css">
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">">
 	<link href="https://fonts.googleapis.com/csscss?family=montserrat" rel="stylesheet">
 	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,21 +14,34 @@
 </head>
 
 <body class="login">
-	<nav class="navbar navbar-default">
-		<div class="navbar header">
-		</div>
-	</nav>
-	<div class="container-fluid bg-1 text-center">
-		<h3 class="margin">Login</h3><br>
-		<div class="center">
-
-			<form method="POST" action="php/login.php">
-				<input type="text" class="form-control" id="hostusername" name="hostusername" placeholder="Username"><br><br>
-				<input type="password" class="form-control" id="hostpassword" name="hostpassword" placeholder="Password"><br><br>
-				<input type="submit" class="btn btn-primary" value="LOGIN" name="login"></input><br><br>	
-			</form>		
-		</div>
-	</div>
+	<!-- Navigation -->
+    <div class="navigation">
+        <div class="innerNavigation">
+            <input id="btnBack" type="button" value="Back" class="btnMenu">
+        </div>
+    </div>
+	
+    <div class="description">
+    <h1 class="page-header" align="center">LOGIN</h1>
+    
+            Login to continue to the admin dashboard.<br><br>
+    </div>
+    <div class="grid">
+        <br><br><br><br>
+        <form method="POST" action="php/login.php">
+            <input type="text" class="form-control" id="hostusername" name="hostusername" placeholder="Username"><br><br>
+            <input type="password" class="form-control" id="hostpassword" name="hostpassword" placeholder="Password"><br><br>
+            <input type="submit" class="btn btn-primary" value="LOGIN" name="login"></input><br><br>	
+        </form>		
+    </div>
+	
+    <script>
+    // Go back when clicked
+    document.getElementById("btnBack").onclick = function () {
+        location.href = "index.html";
+    };
+    </script>
 </body>
 
 </html>
+

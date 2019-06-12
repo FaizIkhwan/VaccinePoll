@@ -20,10 +20,32 @@ body {
 
 .navigation {
     width: 1000px;
-    height: 50px;
+    height: 60px;
     background-color: #1D3C6A;
     margin: auto;
+    margin-bottom: auto;
+    border-radius: 30px 30px 0 0;
+    border: 2px solid #cbcbcb;
+    border-bottom-width: 0;
+}
+
+.description {
+    display: block;
+    width: 1000px;
+    background-color: #ffffffde;
     margin-bottom: 20px;
+    border-radius: 0 0 30px 30px;
+    border: 2px solid #cbcbcb;
+    border-top-width: 0;
+}
+
+.page-header {
+    background-color: #ffffffde;
+    width: 1000px;
+    margin: auto;
+    border: 2px solid #cbcbcb;
+    border-top-width: 0;
+    border-bottom-width: 0;
 }
 
 .innerNavigation {
@@ -50,7 +72,7 @@ body {
     font-family: "sans-serif";
     width: 1000px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 20px;
     color: #000000;
 }
@@ -72,12 +94,11 @@ body {
     box-shadow: 10px 15px 5px #cbcbcb;
 }
 
-
 .list-of-question {
-    width: 600px;
+    width: 900px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 10px 50px 50px 50px;
+    padding: 30px 0px 30px 0px;
     border-radius: 50px;
     border: 2px solid #cbcbcb;
     box-shadow: 10px 15px 5px #cbcbcb;
@@ -133,3 +154,4 @@ body {
     color: #2b2b2b;
     font-size: 18px;
 }
+

@@ -70,3 +70,4 @@ function createQuiz(data){
     quiz = new Quiz(questions);
     populate();
 }
+
