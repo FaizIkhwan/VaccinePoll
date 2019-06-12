@@ -5,6 +5,7 @@
   $takequestion = "SELECT * FROM questions WHERE questionid = $questionnum;";
   $resultquestion = mysqli_query($con, $takequestion);
   $takereal = mysqli_fetch_row($resultquestion);
+  $actualid = $takereal[0];
   $actualquestion = $takereal[1];
   $actualreply1 = $takereal[2];
   $actualreply2 = $takereal[3];
@@ -21,12 +22,21 @@
   mysqli_close($con);
 
   echo "<script>";
-  echo "document.getElementById('question').innerHTML = '";
+  echo "document.getElementById('question";
+  echo $actualid;
+  echo "').innerHTML = '";
   echo $actualquestion;
   echo "';";
-  echo "Chart.platform.disableCSSInjection = true;";
-  echo "var ctx = document.getElementById('myChart').getContext('2d');";
-  echo "var myChart = new Chart(ctx, {type: 'bar', data: { labels: ['";
+  echo "var ctx";
+  echo $actualid;
+  echo " = document.getElementById('myChart";
+  echo $actualid;
+  echo "').getContext('2d');";
+  echo "var myChart";
+  echo $actualid;
+  echo " = new Chart(ctx";
+  echo $actualid;
+  echo ", {type: 'bar', data: { labels: ['";
   echo $actualreply1;
   echo "', '";
   echo $actualreply2;

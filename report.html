@@ -18,6 +18,10 @@
             -webkit-user-select: none;
             -ms-user-select: none;
         }
+        .grid {
+            height: auto;
+            margin: auto;
+        }
         </style>
     </head>
     <body>
@@ -40,13 +44,65 @@
         <div class="grid">
             <form method="POST" id="main">        
                 <div id="quiz">
-                    <p id="question"></p>
+                    <p id="question1"></p>
                     <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
-                        <canvas id="myChart" width="400" height="400"></canvas>
+                        <canvas id="myChart1" width="400" height="400"></canvas>
                     </div>
-                    <div class="buttons">        
-                        <button id="prev" onsubmit="" type="button">Previous<span id="prev"></span></button>
-                        <button id="next" onsubmit="" type="button">Next<span id="next"></span></button>                
+                    <p id="question2"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart2" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question3"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart3" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question4"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart4" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question5"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart5" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question6"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart6" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question7"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart7" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question8"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart8" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question9"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart9" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question10"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart10" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question11"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart11" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question12"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart12" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question13"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart13" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question14"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart14" width="400" height="400"></canvas>
+                    </div>
+                    <p id="question15"></p>
+                    <div class="chart-container" style="display: block; margin-left: auto; margin-right: auto;width: 390px; height: 390px;">
+                        <canvas id="myChart15" width="400" height="400"></canvas>
                     </div>
                 </div>
             </form>
@@ -59,10 +115,52 @@
             };
         </script>
         <script>
-        checkNum();
+        Chart.platform.disableCSSInjection = true;
         
+        $.post("http://35.240.226.40/php/getreport.php", {number: 1}, function(result){
+            $('[id="myChart1"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 2}, function(result){
+            $('[id="myChart2"]').html(result);
+        });
         $.post("http://35.240.226.40/php/getreport.php", {number: 3}, function(result){
-            $("span").html(result);
+            $('[id="myChart3"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 4}, function(result){
+            $('[id="myChart4"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 5}, function(result){
+            $('[id="myChart5"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 6}, function(result){
+            $('[id="myChart6"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 7}, function(result){
+            $('[id="myChart7"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 8}, function(result){
+            $('[id="myChart8"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 9}, function(result){
+            $('[id="myChart9"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 10}, function(result){
+            $('[id="myChart10"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 11}, function(result){
+            $('[id="myChart11"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 12}, function(result){
+            $('[id="myChart12"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 13}, function(result){
+            $('[id="myChart13"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 14}, function(result){
+            $('[id="myChart14"]').html(result);
+        });
+        $.post("http://35.240.226.40/php/getreport.php", {number: 15}, function(result){
+            $('[id="myChart15"]').html(result);
         });
         </script>
     </body>
