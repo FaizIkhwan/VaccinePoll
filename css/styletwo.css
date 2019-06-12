@@ -1,6 +1,8 @@
 body {
     text-align: center;
     background: url(/img/gambar.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
   
