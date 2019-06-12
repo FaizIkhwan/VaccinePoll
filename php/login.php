@@ -9,6 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['login']))
         $result = mysqli_query($con, $mysql_query);
         if(mysqli_num_rows($result) > 0) {
                 echo "Login success";
+                header( 'Location: /dashboard.html' );
         }
         else {
                 echo "<html>";

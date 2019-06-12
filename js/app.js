@@ -59,7 +59,7 @@ var questions = [
     new Question("Your Age", ["18-30", "31-39", "40+"]),
     new Question("Gender", ["Male", "Female", "Prefer not to tell"]),
     new Question("Educational profile", ["Post graduate", "Undergraduate","Secondary school"]),
-    new Question("How many kids do you have?", ["1-2", "3-4", "5+"]),
+    new Question("How many kids do you have?", ["0-2", "3-4", "5+"]),
     new Question("I believe it is important for my child to receive all the necessary vaccinations", ["Agree", "Mixed feeling", "Disagree"]),
     new Question("I believe politicians should be role models that encourage vaccination", ["Agree", "Mixed feeling", "Disagree"]),
     new Question("Tony Blair did not vaccinate his children with the mmr vaccine;this did/would discourage me from vaccinating my children", ["Agree", "Mixed feeling", "Disagree"]),
@@ -70,7 +70,7 @@ var questions = [
     new Question("I believe vaccination programmes are worthwhile", ["Agree", "Mixed feeling", "Disagree"]),
     new Question("I believe the media exaggerate reports about disease outbreak and vaccinations", ["Agree", "Mixed feeling", "Disagree"]),
     new Question("I feel well-informed about vaccinations for my children", ["Agree", "Mixed feeling", "Disagree"]),
-    new Question("I believe vaccination programmes are worthwhile", ["Agree", "Mixed feeling", "Disagree"]),  
+    new Question("Please select your household income", ["<=RM1500", "RM1501-RM3500", ">=RM3501"]),  
 ];
 
 // create quiz

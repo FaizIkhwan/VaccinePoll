@@ -1,4 +1,5 @@
 <?php
+
 require "conn.php";
 
 $mysql_query = "select * from questions;";
@@ -9,7 +10,8 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         echo "questionid: " . $row["questionid"]. " - questiondescription: " . $row["questiondescription"]. " - answer1: " . $row["answer1"]. " - answer2: " . $row["answer2"]. " - answer3: " . $row["answer3"]. "<br>";
     }
-} else {
+} 
+else {
     echo "0 results";
 }
 
