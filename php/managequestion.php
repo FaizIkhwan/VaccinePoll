@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 
     <body>
@@ -16,7 +16,7 @@
 
         <!-- List of questions -->
         <div class="list-of-question">
-            <form>
+            <form method="POST" action="updatequestion.php">
 
                 <?php
 
@@ -32,10 +32,10 @@
                     while($row = mysqli_fetch_assoc($result)) {
 
                         echo $i;        
-                        echo "<input type=\"text\" id=\"q" . $i . "\" value=\"$row[questiondescription]\">";    
-                        echo "<input type=\"text\" id=\"q" . $i . "\" value=\"$row[answer1]\">";    
-                        echo "<input type=\"text\" id=\"q" . $i . "\" value=\"$row[answer2]\">";    
-                        echo "<input type=\"text\" id=\"q" . $i . "\" value=\"$row[answer3]\">";    
+                        echo "<input type=\"text\" name=\"q" . $i . "\" id=\"q" . $i . "\" value=\"$row[questiondescription]\">";    
+                        echo "<input type=\"text\" name=\"q" . $i . "a1\" id=\"q" . $i . "a1\" value=\"$row[answer1]\">";    
+                        echo "<input type=\"text\" name=\"q" . $i . "a2\" id=\"q" . $i . "a2\" value=\"$row[answer2]\">";    
+                        echo "<input type=\"text\" name=\"q" . $i . "a3\" id=\"q" . $i . "a3\" value=\"$row[answer3]\">";    
                         echo "<br>";
 
                         $i++;
@@ -49,7 +49,7 @@
 
                 ?>
 
-                <input type="submit" value="Done">
+                <input type="submit" value="Update" name="update">
             </form>
         </div>   
 
@@ -57,7 +57,7 @@
 
     <script type="text/javascript">
         document.getElementById("btnBack").onclick = function () {
-            location.href = "index.html";
+            location.href = "/index.html";
         };
     </script>
 
