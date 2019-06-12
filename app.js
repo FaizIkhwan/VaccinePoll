@@ -22,6 +22,19 @@ function populate() {
 function guess(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
+        var question = $("#question").text();
+        var answer = guess;
+        console.log("question!: " + question);
+        console.log("answer: " + answer);
+
+        // send to database
+        $.post("sendanswer.php", {
+            question: question,
+            answer: answer
+          }).done(function() {
+              console.log("Success");
+        });
+
         quiz.guess(guess);
         populate();
     }
