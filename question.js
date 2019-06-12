@@ -4,6 +4,6 @@ function Question(text, choices) {
 }
 
 Question.prototype.isAnswer = function(choice) {
-    // console.log("Text: " + this.text);
-    // console.log("Choice: " + choice);
+    console.log("Text: " + this.text);
+    console.log("Choice: " + choice);
 }
