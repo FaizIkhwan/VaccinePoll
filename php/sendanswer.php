@@ -4,17 +4,12 @@
   $question = $_POST['question'];
   $answer = $_POST['answer'];
 
-  echo "$question : $answer";
+  $sql   = "INSERT INTO listOfAnswer (question, answer) VALUES ('$question', '$answer')";
 
-  $save1   = "INSERT INTO 'listOfAnswer' ('question', 'answer') VALUES ('$question', '$answer')";
-
-  $success = $mysqli->query($save1);
-
-  if (!$success) {
-    die("Couldn't enter data: ".$mysqli->error);
-
-    echo "unsuccessfully";
+  if (!mysqli_query($con,$sql)) {
+    echo "Record could not be added.";
+    die('Error: ' . mysql_error());
   }
 
-  echo "successfully";
+  echo "1 record added successfully.";
 ?>
