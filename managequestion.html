@@ -10,7 +10,7 @@
         <!-- Navigation -->
         <div class="navigation">
             <div class="innerNavigation">        
-                <input id="btnLogout" type="button" value="Back" class="btnMenu">    
+                <input id="btnBack" type="button" value="Back" class="btnMenu">    
             </div>  
         </div>
 
@@ -113,5 +113,11 @@
         </div>   
 
     </body>
+
+    <script type="text/javascript">
+        document.getElementById("btnBack").onclick = function () {
+            location.href = "index.html";
+        };
+    </script>
 
 </html>
