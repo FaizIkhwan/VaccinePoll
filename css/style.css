@@ -1,11 +1,19 @@
 body {
     text-align: center;
-    background: url(gambar.jpg);
+    background: url(img/gambar.jpg);
     background-size: cover;
 }
 
 .dashboard {
-    background: url(gambar3.jpg);
+    background: url(img/gambar3.jpg);
+}
+
+.login {
+    background: url(img/gambar2.jpg);
+}
+
+.report {
+    background: url(img/vaccin.png);
 }
 
 .navigation {
