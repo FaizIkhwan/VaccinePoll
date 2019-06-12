@@ -28,7 +28,7 @@ function guess(id, guess) {
         console.log("answer: " + answer);
 
         // send to database
-        $.post("sendanswer.php", {
+        $.post("php/sendanswer.php", {
             question: question,
             answer: answer
           }).done(function() {
