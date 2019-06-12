@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background: url(img/gambar.jpg);
+    background: url(/img/gambar.jpg);
     background-size: cover;
   }
   
